@@ -1,39 +1,60 @@
 # install.ps1
-# Run this script in PowerShell as Administrator (symlinks require elevated privileges unless Developer Mode is enabled)
+# Run this script in PowerShell as Admin (symlinks require elevated privileges unless Developer
+# Mode is enabled)
 
-# Path to your dotfiles repo
-$repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
-
-# VS Code settings
-$target = "$repo\vscode\settings.json"
-$link   = "$env:APPDATA\Code\User\settings.json"
-
-# Remove existing settings.json if it exists
-if (Test-Path $link) {
-    Remove-Item $link -Force
+# Returns $true if running as Administrator, $false otherwise
+function Test-IsAdmin {
+    $currentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal = New-Object Security.Principal.WindowsPrincipal($currentUser)
+    return $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
 
-# Create symlink
-New-Item -ItemType SymbolicLink -Path $link -Target $target
+if (-not (Test-IsAdmin)) {
+    Write-Warning "This script is not running as Administrator."
+    Write-Warning "Symlink will not work; copying files instead"
+}
+else {
+    Write-Host "Running as Administrator. Symlinks should work, if not try:"
+    Write-Host "powershell -ExecutionPolicy Bypass -File .\install.ps1"
+}
 
-Write-Host "Symlinked VS Code settings.json"
+# path to your dotfiles repo
+$repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
 
-# # Example: Git config
-# $gitTarget = "$repo\git\.gitconfig"
-# $gitLink   = "$env:USERPROFILE\.gitconfig"
+# dotfile list
+$mappings = @(
+    @{ Source = "$repo\vscode\settings.json"; Dest = "$env:APPDATA\Code\User\settings.json" }
+    # @{ Source = "$repo\git\.gitconfig"; Dest = "$env:USERPROFILE\.gitconfig" }
+)
 
-# if (Test-Path $gitLink) {
-#     Remove-Item $gitLink -Force
-# }
-# New-Item -ItemType SymbolicLink -Path $gitLink -Target $gitTarget
-# Write-Host "Symlinked Git config"
+foreach ($map in $mappings) {
+    # test the source file for validity 
+    if (-not (Test-Path $map.Source)) {
+        Write-Error "Source dotfile not found at $($map.Source); is the dotfile repo messed up?"
+        continue
+    }
 
-# # Example: clang-format
-# $clangTarget = "$repo\clang\.clang-format"
-# $clangLink   = "$env:USERPROFILE\.clang-format"
+    # get the directory of the destination and test it for validity
+    $dir = Split-Path $map.Dest -Parent
+    if (-not (Test-Path $dir)) {
+        Write-Error "Dest location not found at $($map.Dest); are you missing an application?"
+        continue
+    }
 
-# if (Test-Path $clangLink) {
-#     Remove-Item $clangLink -Force
-# }
-# New-Item -ItemType SymbolicLink -Path $clangLink -Target $clangTarget
-# Write-Host "Symlinked clang-format"
+    # remove existing file if it exists
+    if (Test-Path $map.Dest) {
+        Remove-Item $map.Dest -Force
+    }
+
+    if (Test-IsAdmin) {
+        # create symlink
+        New-Item -ItemType SymbolicLink -Path $map.Dest -Target $map.Source
+        New-Item
+        Write-Host "Symlinked $($map.Dest) to $($map.Source)"
+    }
+    else {
+        # copy file
+        Copy-Item $map.Source $map.Dest -Force
+        Write-Host "Copied $($map.Source) to $($map.Dest)"
+    }
+}
