@@ -1,3 +1,4 @@
+# cSpell:disable
 [user]
 	name = folsterA
 	email = folsteraustin@gmail.com
@@ -9,13 +10,6 @@
 
 [color]
     ui = auto
-
-[alias]
-    st = status -sb
-    co = checkout
-    br = branch
-    ci = commit
-    lg = log --oneline --graph --decorate --all
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

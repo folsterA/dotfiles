@@ -1,4 +1,6 @@
 # install.ps1
+# cSpell:disable
+
 # Run this script in PowerShell as Admin (symlinks require elevated privileges unless Developer
 # Mode is enabled)
 
@@ -24,9 +26,11 @@ $repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
 # dotfile list
 $mappings = @(
     @{ Source = "$repo\vscode\settings.json"; Dest = "$env:APPDATA\Code\User\settings.json" },
+    @{ Source = "$repo\clang\.clangd"; Dest = "$env:LOCALAPPDATA\clangd\config.yaml" },
     @{ Source = "$repo\git\.gitconfig"; Dest = "$env:USERPROFILE\.gitconfig" },
     @{ Source = "$repo\git\.gitattributes"; Dest = "$env:USERPROFILE\.gitattributes" },
-    @{ Source = "$repo\clang\.clangd"; Dest = "$env:LOCALAPPDATA\clangd\config.yaml" }
+    @{ Source = "$repo\shell\.bashrc"; Dest = "$env:USERPROFILE\.bashrc" },
+    @{ Source = "$repo\shell\.bash_profile"; Dest = "$env:USERPROFILE\.bash_profile" }
 )
 
 foreach ($map in $mappings) {

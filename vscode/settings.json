@@ -1,16 +1,8 @@
 {
     "chat.disableAIFeatures": true,
+    // cSpell:disable
     "cSpell.userWords": [
-        "Allman",
-        "bugprone",
-        "Cascadia",
-        "clangd",
-        "clippy",
-        "cppcoreguidelines",
-        "doxdocgen",
-        "excludesfile",
-        "Folster",
-        "oneline"
+        "Folster"
     ],
     "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
     "doxdocgen.generic.authorName": "Folster, Austin",
