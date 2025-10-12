@@ -1,0 +1,23 @@
+CompileFlags:
+  Add: [-std=c++20]
+
+Diagnostics:
+  ClangTidy:
+    FastCheckFilter: None
+    Add:
+      [
+        bugprone-*,
+        cppcoreguidelines-*,
+        modernize-*,
+        performance-*,
+        readability-*,
+      ]
+    CheckOptions:
+      bugprone-unused-local-non-trivial-variable.IncludeTypes: ".*"
+    Remove: [modernize-use-trailing-return-type]
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  Designators: true

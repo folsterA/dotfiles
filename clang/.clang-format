@@ -1,0 +1,19 @@
+BasedOnStyle: LLVM
+Language: Cpp
+
+# General Formatting
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+BreakBeforeBraces: Allman
+InsertNewlineAtEOF: true
+
+PointerAlignment: Left
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+DerivePointerAlignment: false
+SpaceBeforeParens: ControlStatements
+SortIncludes: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+SpaceBeforeCpp11BracedList: true

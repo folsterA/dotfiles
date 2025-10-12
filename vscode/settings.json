@@ -1,9 +1,12 @@
 {
     "chat.disableAIFeatures": true,
     "cSpell.userWords": [
+        "Allman",
+        "bugprone",
         "Cascadia",
         "clangd",
         "clippy",
+        "cppcoreguidelines",
         "doxdocgen",
         "excludesfile",
         "Folster",

@@ -25,7 +25,8 @@ $repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
 $mappings = @(
     @{ Source = "$repo\vscode\settings.json"; Dest = "$env:APPDATA\Code\User\settings.json" },
     @{ Source = "$repo\git\.gitconfig"; Dest = "$env:USERPROFILE\.gitconfig" },
-    @{ Source = "$repo\git\.gitattributes"; Dest = "$env:USERPROFILE\.gitattributes" }
+    @{ Source = "$repo\git\.gitattributes"; Dest = "$env:USERPROFILE\.gitattributes" },
+    @{ Source = "$repo\clang\.clangd"; Dest = "$env:LOCALAPPDATA\clangd\config.yaml" }
 )
 
 foreach ($map in $mappings) {

@@ -38,7 +38,7 @@
 *.node   binary
 
 # --- Language‑specific tweaks ---
-# Treat lockfiles as text but prefer "ours" on merge to avoid conflicts
+# Treat lock files as text but prefer "ours" on merge to avoid conflicts
 package-lock.json merge=ours
 yarn.lock         merge=ours
 pnpm-lock.yaml    merge=ours
