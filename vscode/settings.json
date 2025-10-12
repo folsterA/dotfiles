@@ -1,0 +1,95 @@
+{
+    "chat.disableAIFeatures": true,
+    "cSpell.userWords": [
+        "Cascadia",
+        "clangd",
+        "clippy",
+        "doxdocgen",
+        "Folster"
+    ],
+    "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
+    "doxdocgen.generic.authorName": "Folster, Austin",
+    "doxdocgen.generic.authorTag": "@folsterA {author} ({email})",
+    "editor.formatOnSave": true,
+    "editor.fontFamily": "Cascadia Code, monospace",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[Tokyo Night]": {
+            "enabled": true
+        },
+        "[Tokyo Night Storm]": {
+            "enabled": true
+        },
+        "[Tokyo Night Light]": {
+            "enabled": true
+        }
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // cpp settings
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false
+    },
+    // json settings
+    "json.format.enable": false,
+    // python settings
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    // rust settings
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "rust-analyzer.check.command": "clippy",
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "<leader>", "e" ],
+            "commands": [ ":Ex" ]
+        },
+        {
+            "before": [ "<leader>", "f" ],
+            "commands": [ "workbench.action.quickOpen" ]
+        },
+        {
+            "before": [ "<leader>", "s" ],
+            "commands": [ "workbench.action.findInFiles" ]
+        },
+        {
+            "before": [ "<leader>", "j" ],
+            "commands": [ "workbench.action.togglePanel" ]
+        },
+        {
+            "before": [ "<leader>", "b" ],
+            "commands": [ "workbench.action.toggleSidebarVisibility" ]
+        },
+        {
+            "before": [ "<leader>", "1" ],
+            "commands": [ "workbench.action.focusFirstEditorGroup" ]
+        },
+        {
+            "before": [ "<leader>", "2" ],
+            "commands": [ "workbench.action.focusSecondEditorGroup" ]
+        },
+        {
+            "before": [ "<leader>", "m", "1" ],
+            "commands": [ "workbench.action.moveEditorToLeftGroup" ]
+        },
+        {
+            "before": [ "<leader>", "m", "2" ],
+            "commands": [ "workbench.action.moveEditorToRightGroup" ]
+        }
+    ],
+    "workbench.colorTheme": "Tokyo Night"
+}
