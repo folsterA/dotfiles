@@ -1,0 +1,57 @@
+# --- Line endings ---
+# Normalize all text files to LF in the repo
+* text=auto
+
+# Explicitly enforce line endings for certain file types
+*.sh     text eol=lf
+*.bash   text eol=lf
+*.zsh    text eol=lf
+*.cpp    text eol=lf
+*.hpp    text eol=lf
+*.h      text eol=lf
+*.c      text eol=lf
+*.rs     text eol=lf
+*.toml   text eol=lf
+*.js     text eol=lf
+*.ts     text eol=lf
+*.svelte text eol=lf
+*.json   text eol=lf
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# --- Binary files ---
+# Prevent Git from attempting to diff/merge these
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.zip    binary
+*.gz     binary
+*.tar    binary
+*.exe    binary
+*.dll    binary
+*.so     binary
+*.a      binary
+*.o      binary
+*.node   binary
+
+# --- Language‑specific tweaks ---
+# Treat lockfiles as text but prefer "ours" on merge to avoid conflicts
+package-lock.json merge=ours
+yarn.lock         merge=ours
+pnpm-lock.yaml    merge=ours
+Cargo.lock  text  merge=ours
+
+# Use built‑in diff drivers for certain languages
+*.md     diff=markdown
+*.cs     diff=csharp
+*.py     diff=python
+*.rs     diff=rust
+
+# --- Export rules ---
+# Don’t include docs or CI configs in `git archive`
+docs/*           export-ignore
+.github/*        export-ignore
+.gitlab-ci.yml   export-ignore

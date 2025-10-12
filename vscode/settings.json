@@ -5,7 +5,9 @@
         "clangd",
         "clippy",
         "doxdocgen",
-        "Folster"
+        "excludesfile",
+        "Folster",
+        "oneline"
     ],
     "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
     "doxdocgen.generic.authorName": "Folster, Austin",

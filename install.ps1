@@ -23,8 +23,9 @@ $repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
 
 # dotfile list
 $mappings = @(
-    @{ Source = "$repo\vscode\settings.json"; Dest = "$env:APPDATA\Code\User\settings.json" }
-    # @{ Source = "$repo\git\.gitconfig"; Dest = "$env:USERPROFILE\.gitconfig" }
+    @{ Source = "$repo\vscode\settings.json"; Dest = "$env:APPDATA\Code\User\settings.json" },
+    @{ Source = "$repo\git\.gitconfig"; Dest = "$env:USERPROFILE\.gitconfig" },
+    @{ Source = "$repo\git\.gitattributes"; Dest = "$env:USERPROFILE\.gitattributes" }
 )
 
 foreach ($map in $mappings) {
@@ -49,7 +50,6 @@ foreach ($map in $mappings) {
     if (Test-IsAdmin) {
         # create symlink
         New-Item -ItemType SymbolicLink -Path $map.Dest -Target $map.Source
-        New-Item
         Write-Host "Symlinked $($map.Dest) to $($map.Source)"
     }
     else {
