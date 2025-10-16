@@ -52,6 +52,14 @@
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": [ "<leader>", "q" ],
+            "commands": [ ":q" ]
+        },
+        {
+            "before": [ "<leader>", "w" ],
+            "commands": [ ":w" ]
+        },
+        {
             "before": [ "<leader>", "e" ],
             "commands": [ ":Ex" ]
         },
@@ -86,6 +94,10 @@
         {
             "before": [ "<leader>", "m", "2" ],
             "commands": [ "workbench.action.moveEditorToRightGroup" ]
+        },
+        {
+            "before": [ "<leader>", "<tab>" ],
+            "commands": [ "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" ]
         }
     ],
     "workbench.colorTheme": "Tokyo Night"

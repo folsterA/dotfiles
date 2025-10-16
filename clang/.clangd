@@ -15,6 +15,16 @@ Diagnostics:
       ]
     CheckOptions:
       bugprone-unused-local-non-trivial-variable.IncludeTypes: ".*"
+      readability-identifier-naming.NamespaceCase: "lower_case"
+      readability-identifier-naming.ClassCase: "CamelCase"
+      readability-identifier-naming.StructCase: "CamelCase"
+      readability-identifier-naming.FunctionCase: "camelBack"
+      readability-identifier-naming.VariableCase: "camelBack"
+      readability-identifier-naming.ConstantCase: "camelBack"
+      readability-identifier-naming.MacroCase: "UPPER_CASE"
+      readability-identifier-naming.EnumCase: "CamelCase"
+      readability-identifier-naming.EnumConstantCase: "CamelCase"
+      readability-identifier-naming.TypeAliasCase: "lower_case"
     Remove: [modernize-use-trailing-return-type]
 
 InlayHints:
