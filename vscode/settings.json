@@ -1,5 +1,6 @@
 {
     "chat.disableAIFeatures": true,
+    "cmake.showConfigureWithDebuggerNotification": false,
     // cSpell:disable
     "cSpell.userWords": [
         "Folster"
@@ -109,5 +110,5 @@
             "commands": [ "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" ]
         }
     ],
-    "workbench.colorTheme": "Tokyo Night"
+    "workbench.colorTheme": "Tokyo Night",
 }

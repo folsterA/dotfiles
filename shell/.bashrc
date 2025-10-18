@@ -29,14 +29,13 @@ elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# git exports
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+
 # --- prompt (PS1) ---
-TITLE=" \[\033]0;$TITLEPREFIX:$PWD\007\] \n"
-USERHOST=" \[\033[32m\] \u@\h "
-MSYS=" \[\033[35m\] $MSYSTEM "
-PATHC=" \[\033[33m\] \w"
-GIT=" \[\033[36m\] $(__git_ps1)"
-RESET=" \[\033[0m\] \n$ "
-PS1="${TITLE}${USERHOST}${MSYS}${PATHC}${GIT}${RESET}"
+PS1=' \[\033]0;$TITLEPREFIX:$PWD\007\]\[\033[32m\] \u@\h\[\033[35m\] '"$MSYSTEM"'\[\033[33m\] \w\[\033[36m\] $(__git_ps1 "(%s)")\[\033[0m\] 
+\$ '
 
 # --- aliases ---
 alias ll='ls -alF'
