@@ -10,6 +10,7 @@
     "editor.formatOnSave": true,
     "editor.fontFamily": "Cascadia Code, monospace",
     "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.lightbulb.enabled": "off",
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.rulers": [
@@ -62,6 +63,14 @@
         {
             "before": [ "<leader>", "e" ],
             "commands": [ ":Ex" ]
+        },
+        {
+            "before": [ "<leader>", "t" ],
+            "commands": [ "workbench.action.terminal.toggleTerminal" ]
+        },
+        {
+            "before": [ "<leader>", "d" ],
+            "commands": [ "editor.action.showHover" ]
         },
         {
             "before": [ "<leader>", "f" ],
