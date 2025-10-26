@@ -38,6 +38,7 @@
         "editor.insertSpaces": true,
         "editor.detectIndentation": false
     },
+    "files.eol": "\n",
     // json settings
     "json.format.enable": false,
     // python settings
@@ -110,5 +111,5 @@
             "commands": [ "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" ]
         }
     ],
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "Tokyo Night"
 }
