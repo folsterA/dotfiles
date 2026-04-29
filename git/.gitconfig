@@ -4,8 +4,8 @@
 	email = folsteraustin@gmail.com
 
 [core]
-    editor = code
-    autocrlf = input
+	editor = code --wait
+	autocrlf = input
     attributesFile = ~/.gitattributes
 
 [color]

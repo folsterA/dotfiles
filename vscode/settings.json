@@ -1,115 +1,126 @@
 {
-    "chat.disableAIFeatures": true,
-    "cmake.showConfigureWithDebuggerNotification": false,
-    // cSpell:disable
-    "cSpell.userWords": [
-        "Folster"
-    ],
-    "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
-    "doxdocgen.generic.authorName": "Folster, Austin",
-    "doxdocgen.generic.authorTag": "@folsterA {author} ({email})",
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "Cascadia Code, monospace",
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "editor.lightbulb.enabled": "off",
-    "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": false,
-    "editor.rulers": [
-        100
-    ],
-    "editor.semanticHighlighting.enabled": true,
-    "editor.semanticTokenColorCustomizations": {
-        "[Tokyo Night]": {
-            "enabled": true
-        },
-        "[Tokyo Night Storm]": {
-            "enabled": true
-        },
-        "[Tokyo Night Light]": {
-            "enabled": true
-        }
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "chat.disableAIFeatures": true,
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "cSpell.userWords": ["Folster"],
+  "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
+  "doxdocgen.generic.authorName": "Folster, Austin",
+  "doxdocgen.generic.authorTag": "@folsterA {author} ({email})",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "Cascadia Code, monospace",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.lightbulb.enabled": "off",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.rulers": [100],
+  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticTokenColorCustomizations": {
+    "[Tokyo Night]": {
+      "enabled": true,
     },
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    // cpp settings
-    "[cpp]": {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
-        "editor.tabSize": 4,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": false
+    "[Tokyo Night Storm]": {
+      "enabled": true,
     },
-    "files.eol": "\n",
-    // json settings
-    "json.format.enable": false,
-    // python settings
-    "[python]": {
-        "editor.formatOnType": true
+    "[Tokyo Night Light]": {
+      "enabled": true,
     },
-    // rust settings
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.eol": "\n",
+  "rust-analyzer.check.command": "clippy",
+  "svelte.enable-ts-plugin": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "vim.leader": " ",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":q"],
     },
-    "rust-analyzer.check.command": "clippy",
-    "terminal.integrated.fontFamily": "monospace",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "vim.leader": " ",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [ "<leader>", "q" ],
-            "commands": [ ":q" ]
-        },
-        {
-            "before": [ "<leader>", "w" ],
-            "commands": [ ":w" ]
-        },
-        {
-            "before": [ "<leader>", "e" ],
-            "commands": [ ":Ex" ]
-        },
-        {
-            "before": [ "<leader>", "t" ],
-            "commands": [ "workbench.action.terminal.toggleTerminal" ]
-        },
-        {
-            "before": [ "<leader>", "d" ],
-            "commands": [ "editor.action.showHover" ]
-        },
-        {
-            "before": [ "<leader>", "f" ],
-            "commands": [ "workbench.action.quickOpen" ]
-        },
-        {
-            "before": [ "<leader>", "s" ],
-            "commands": [ "workbench.action.findInFiles" ]
-        },
-        {
-            "before": [ "<leader>", "j" ],
-            "commands": [ "workbench.action.togglePanel" ]
-        },
-        {
-            "before": [ "<leader>", "b" ],
-            "commands": [ "workbench.action.toggleSidebarVisibility" ]
-        },
-        {
-            "before": [ "<leader>", "1" ],
-            "commands": [ "workbench.action.focusFirstEditorGroup" ]
-        },
-        {
-            "before": [ "<leader>", "2" ],
-            "commands": [ "workbench.action.focusSecondEditorGroup" ]
-        },
-        {
-            "before": [ "<leader>", "m", "1" ],
-            "commands": [ "workbench.action.moveEditorToLeftGroup" ]
-        },
-        {
-            "before": [ "<leader>", "m", "2" ],
-            "commands": [ "workbench.action.moveEditorToRightGroup" ]
-        },
-        {
-            "before": [ "<leader>", "<tab>" ],
-            "commands": [ "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" ]
-        }
-    ],
-    "workbench.colorTheme": "Tokyo Night"
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"],
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": [":Ex"],
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"],
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.showHover"],
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"],
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.findInFiles"],
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.togglePanel"],
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+    },
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["workbench.action.focusFirstEditorGroup"],
+    },
+    {
+      "before": ["<leader>", "2"],
+      "commands": ["workbench.action.focusSecondEditorGroup"],
+    },
+    {
+      "before": ["<leader>", "m", "1"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"],
+    },
+    {
+      "before": ["<leader>", "m", "2"],
+      "commands": ["workbench.action.moveEditorToRightGroup"],
+    },
+    {
+      "before": ["<leader>", "<tab>"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+      ],
+    },
+  ],
+  "workbench.colorTheme": "Tokyo Night",
+  "git.blame.statusBarItem.enabled": true,
 }
