@@ -31,6 +31,7 @@ $mappings = @(
     @{ Source = "$repo\git\.gitattributes"; Dest = "$env:USERPROFILE\.gitattributes" },
     @{ Source = "$repo\shell\.bashrc"; Dest = "$env:USERPROFILE\.bashrc" },
     @{ Source = "$repo\shell\.bash_profile"; Dest = "$env:USERPROFILE\.bash_profile" }
+    @{ Source = "$repo\node\.npmrc"; Dest = "$env:USERPROFILE\.npmrc" }
 )
 
 foreach ($map in $mappings) {

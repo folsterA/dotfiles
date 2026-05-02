@@ -16,12 +16,14 @@
   },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
     "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
   },
   "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -30,7 +32,11 @@
   },
   "chat.disableAIFeatures": true,
   "cmake.showConfigureWithDebuggerNotification": false,
-  "cSpell.userWords": ["Folster"],
+  "cSpell.userWords": [
+    "Folster",
+    "subdeps",
+    "wip"
+  ],
   "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
   "doxdocgen.generic.authorName": "Folster, Austin",
   "doxdocgen.generic.authorTag": "@folsterA {author} ({email})",
@@ -123,4 +129,7 @@
   ],
   "workbench.colorTheme": "Tokyo Night",
   "git.blame.statusBarItem.enabled": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
