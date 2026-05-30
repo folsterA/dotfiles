@@ -1,71 +1,75 @@
 {
+  "[cmake]": {
+    "editor.defaultFormatter": "ms-vscode.cmake-tools",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+  },
+  "cmake.configureOnEdit": true,
+  "cmake.configureOnOpen": true,
+  "cmake.enableAutomaticKitScan": true,
+  "cmake.loggingLevel": "warning",
+  "cmake.preferredGenerators": ["Ninja"],
+  "cmake.showConfigureWithDebuggerNotification": false,
   "[cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
     "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[python]": {
     "editor.formatOnType": true,
   },
+  "python.analysis.typeCheckingMode": "standard",
+  "python.languageServer": "Pylance",
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.detectIndentation": false,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
   },
+  "rust-analyzer.check.command": "clippy",
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode",
     "editor.insertSpaces": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
+  "svelte.enable-ts-plugin": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
   },
+  "cSpell.userWords": ["Folster", "wip"],
   "chat.disableAIFeatures": true,
-  "cmake.showConfigureWithDebuggerNotification": false,
-  "cSpell.userWords": [
-    "Folster",
-    "subdeps",
-    "wip"
-  ],
+  "diffEditor.ignoreTrimWhitespace": false,
   "doxdocgen.generic.authorEmail": "folsteraustin@gmail.com",
   "doxdocgen.generic.authorName": "Folster, Austin",
   "doxdocgen.generic.authorTag": "@folsterA {author} ({email})",
-  "editor.formatOnSave": true,
   "editor.fontFamily": "Cascadia Code, monospace",
+  "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.lightbulb.enabled": "off",
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.rulers": [100],
   "editor.semanticHighlighting.enabled": true,
-  "editor.semanticTokenColorCustomizations": {
-    "[Tokyo Night]": {
-      "enabled": true,
-    },
-    "[Tokyo Night Storm]": {
-      "enabled": true,
-    },
-    "[Tokyo Night Light]": {
-      "enabled": true,
-    },
-  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
-  "rust-analyzer.check.command": "clippy",
-  "svelte.enable-ts-plugin": true,
+  "git.blame.statusBarItem.enabled": true,
   "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "vim.ignorecase": true,
   "vim.leader": " ",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -127,9 +131,29 @@
       ],
     },
   ],
+  "vim.showMarksInGutter": true,
+  "vim.smartRelativeLine": true,
+  "vim.smartcase": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.insert": ["#4c0819", "#ffffff"],
+  "vim.statusBarColors.normal": ["#2A4930", "#ffffff"],
+  "vim.statusBarColors.visual": ["#037d6e", "#ffffff"],
+  "vim.statusBarColors.visualblock": ["#037d6e", "#ffffff"],
+  "vim.statusBarColors.visualline": ["#037d6e", "#ffffff"],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "i"],
+      "commands": ["extension.surroundWithTag"],
+    },
+  ],
+  "vim.whichwrap": "h,l",
   "workbench.colorTheme": "Tokyo Night",
-  "git.blame.statusBarItem.enabled": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#2A4930",
+    "statusBar.noFolderBackground": "#2A4930",
+    "statusBar.debuggingBackground": "#2A4930",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff",
   },
 }
