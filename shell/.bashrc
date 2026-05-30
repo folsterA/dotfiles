@@ -34,7 +34,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 
 # --- prompt (PS1) ---
-PS1=' \[\033]0;$TITLEPREFIX:$PWD\007\]\[\033[32m\] \u@\h\[\033[35m\] '"$MSYSTEM"'\[\033[33m\] \w\[\033[36m\] $(__git_ps1 "(%s)")\[\033[0m\] 
+PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\[\033[38;5;28m\]\u@\h \[\033[38;5;230m\]\w \[\033[38;5;44m\]$(__git_ps1 "(%s)")\[\033[0m\] 
 \$ '
 
 # --- aliases ---
