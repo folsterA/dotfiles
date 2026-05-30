@@ -67,8 +67,8 @@
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
   "git.blame.statusBarItem.enabled": true,
-  "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.fontFamily": "monospace",
   "vim.ignorecase": true,
   "vim.leader": " ",
   "vim.normalModeKeyBindingsNonRecursive": [

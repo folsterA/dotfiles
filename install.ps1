@@ -21,7 +21,7 @@ else {
 }
 
 # path to your dotfiles repo
-$repo = "C:\Users\Austin\Documents\GitHub\dotfiles"
+$repo = $PSScriptRoot
 
 # dotfile list
 $mappings = @(
@@ -35,7 +35,7 @@ $mappings = @(
 )
 
 foreach ($map in $mappings) {
-    # test the source file for validity 
+    # test the source file for validity
     if (-not (Test-Path $map.Source)) {
         Write-Error "Source dotfile not found at $($map.Source); is the dotfile repo messed up?"
         continue
